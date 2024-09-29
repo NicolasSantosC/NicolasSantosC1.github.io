@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carrito - Ilustra-me</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de que styles.css esté conectado -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="imagenes/Fondo3.mp4" type="video/mp4">
+        Tu navegador no soporta videos.
+    </video>
+    <header>
+        <h1>Ilustra-me</h1>
+        <!-- Botón hamburguesa para pantallas pequeñas -->
+        <button class="menu-toggle">☰</button>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#carrito">Tu Carrito</a></li>
+                <li><a href="#productos">Productos</a></li> <!-- Puedes ajustar si es necesario -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="carrito">
+            <h2>Tu Carrito</h2>
+            <div class="carrito-items">
+                <!-- Los productos añadidos aparecerán aquí -->
+            </div>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button id="realizar-pago">Realizar Pago</button> <!-- Botón para realizar pago -->
+            <p id="mensaje-pago" style="display: none; color: green;">Pago realizado</p> <!-- Mensaje de pago -->
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Ilustra-me. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="carrito.js"></script> <!-- Archivo JavaScript para la lógica del carrito -->
+</body>
+</html>

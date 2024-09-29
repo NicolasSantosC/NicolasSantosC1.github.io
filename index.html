@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ilustra-me</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    </head>
+    
+<body>
+    <video autoplay muted loop class="background-video">
+        <source src="imagenes/Fondo3.mp4" type="video/mp4">
+        Tu navegador no soporta videos.
+    </video>
+    <header>
+        <h1>Ilustra-me</h1>
+        <!-- Botón hamburguesa para pantallas pequeñas -->
+        <button class="menu-toggle">☰</button>
+        
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="carrito.html">Carrito</a></li> <!-- Enlace actualizado al carrito -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Sección Inicio -->
+        <section id="inicio">
+            <div class = "Inicio contenido">
+                <h2>Bienvenido a Ilustra-me</h2>
+                <p class="slogan">Descubre nuestras ilustraciones digitales.</p>
+                <img src="imagenes/Ilustra-me.webp" class ="imagen-inicio">
+            </div>
+        </section>
+
+        <!-- Sección Productos -->
+        <section id="productos">
+            <h2>Productos Destacados</h2>
+            <div class="grid-container">
+                <!-- Ejemplo de producto -->
+                <div class="producto">
+                    <img src="imagenes/Flor.jpg" alt="Producto 1">
+                    <h3>Ilustración Digital 1</h3>
+                    <p>$10.00</p>
+                    <button>Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="imagenes/Pintura.jpg" alt="Producto 2">
+                    <h3>Ilustración Digital 2</h3>
+                    <p>$12.00</p>
+                    <button>Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="imagenes/PruebaDibujoDecente.jpg" alt="Producto 3">
+                    <h3>Ilustración Digital 3</h3>
+                    <p>$8.00</p>
+                    <button>Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="imagenes/Pruebita_Hongo.jpg" alt="Producto 4">
+                    <h3>Ilustración Digital 4</h3>
+                    <p>$15.00</p>
+                    <button>Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="imagenes/Trabajito prueba.jpg" alt="Producto 5">
+                    <h3>Ilustración Digital 5</h3>
+                    <p>$20.00</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Ilustra-me. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
