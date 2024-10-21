@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ilustra-me</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilustra-me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
 <body>
     <video autoplay muted loop class="background-video">
         <source src="imagenes/Fondo3.mp4" type="video/mp4">
@@ -15,14 +14,14 @@
     </video>
     <header>
         <h1>Ilustra-me</h1>
-        <!-- Botón hamburguesa para pantallas pequeñas -->
+        <!-- Botón para pantallas pequeñas -->
         <button class="menu-toggle">☰</button>
         
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
-                <li><a href="carrito.html">Carrito</a></li> <!-- Enlace actualizado al carrito -->
+                <li><a href="carrito.html">Carrito</a></li>
             </ul>
         </nav>
     </header>
@@ -33,7 +32,7 @@
             <div class = "Inicio contenido">
                 <h2>Bienvenido a Ilustra-me</h2>
                 <p class="slogan">Descubre nuestras ilustraciones digitales.</p>
-                <img src="imagenes/Ilustra-me.webp" class ="imagen-inicio">
+                <img src="imagenes/Ilustra-me.webp" class ="imagen-inicio" loading="lazy">
             </div>
         </section>
 
@@ -43,31 +42,31 @@
             <div class="grid-container">
                 <!-- Ejemplo de producto -->
                 <div class="producto">
-                    <img src="imagenes/Flor.jpg" alt="Producto 1">
+                    <img src="imagenes/Flor.webp" alt="Producto 1" loading="lazy">
                     <h3>Ilustración Digital 1</h3>
                     <p>$10.000 COP</p>
                     <button>Añadir al carrito</button>
                 </div>
                 <div class="producto">
-                    <img src="imagenes/Pintura.jpg" alt="Producto 2">
+                    <img src="imagenes/Pintura.webp" alt="Producto 2" loading="lazy">
                     <h3>Ilustración Digital 2</h3>
                     <p>$12.000 COP</p>
                     <button>Añadir al carrito</button>
                 </div>
                 <div class="producto">
-                    <img src="imagenes/PruebaDibujoDecente.jpg" alt="Producto 3">
+                    <img src="imagenes/PruebaDibujoDecente.webp" alt="Producto 3" loading="lazy">
                     <h3>Ilustración Digital 3</h3>
                     <p>$8.000 COP</p>
                     <button>Añadir al carrito</button>
                 </div>
                 <div class="producto">
-                    <img src="imagenes/Pruebita_Hongo.jpg" alt="Producto 4">
+                    <img src="imagenes/Pruebita_Hongo.webp" alt="Producto 4" loading="lazy">
                     <h3>Ilustración Digital 4</h3>
                     <p>$15.000 COP</p>
                     <button>Añadir al carrito</button>
                 </div>
                 <div class="producto">
-                    <img src="imagenes/Trabajito prueba.jpg" alt="Producto 5">
+                    <img src="imagenes/Trabajito prueba.webp" alt="Producto 5" loading="lazy">
                     <h3>Ilustración Digital 5</h3>
                     <p>$20.000 COP</p>
                     <button>Añadir al carrito</button>
@@ -82,6 +81,7 @@
     </footer>
 
     <script src="index.js"></script>
+    
     
 </body>
 </html>

@@ -1,0 +1,14 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Ecommerce de ilustraciones digitales",
+  "main": "index.js",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Juan Nicolás Santos Caballero",
+  "license": "MIT"
+}
