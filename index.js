@@ -29,3 +29,74 @@ productos.forEach(boton => {
         alert(`${nombre} ha sido añadido al carrito.`);
     });
 });
+// Función para cargar los productos del carrito
+function cargarCarrito() {
+    const carritoItems = JSON.parse(localStorage.getItem('carrito')) || [];
+    const carritoDiv = document.querySelector('.carrito-items');
+    const totalSpan = document.getElementById('total');
+    carritoDiv.innerHTML = ''; // Limpiar el carrito
+
+    let total = 0;
+
+    carritoItems.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('carrito-item');
+        div.innerHTML = `
+            <img src="${item.img}" alt="${item.nombre}">
+            <span>${item.nombre} - $${item.precio}</span>
+            <button class="eliminar-item" data-nombre="${item.nombre}">Eliminar</button>
+        `;
+        carritoDiv.appendChild(div);
+        total += item.precio;
+    });
+
+    totalSpan.innerText = total.toFixed(2); // Mostrar el total con dos decimales
+}
+
+// Función para vaciar el carrito
+function vaciarCarrito() {
+    localStorage.removeItem('carrito'); // Elimina el carrito del localStorage
+    cargarCarrito(); // Vuelve a cargar el carrito para actualizar el DOM
+}
+
+// Cargar el carrito al inicio y agregar eventos después de que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+    cargarCarrito();
+
+    // Evento para vaciar el carrito
+    const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+    if (vaciarCarritoBtn) {
+        vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
+    }
+
+    // Evento para eliminar un producto del carrito
+    document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('eliminar-item')) {
+            const nombre = e.target.dataset.nombre;
+            let carritoItems = JSON.parse(localStorage.getItem('carrito')) || [];
+            carritoItems = carritoItems.filter(item => item.nombre !== nombre);
+            localStorage.setItem('carrito', JSON.stringify(carritoItems));
+            cargarCarrito(); // Recargar el carrito después de eliminar el item
+        }
+    });
+
+    // Toggle del menú
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('nav ul');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    }
+
+    // Añadir evento al botón de "Realizar Pago"
+    const realizarPagoBtn = document.getElementById('realizar-pago');
+    if (realizarPagoBtn) {
+        realizarPagoBtn.addEventListener('click', function() {
+            const mensajePago = document.getElementById('mensaje-pago');
+            mensajePago.style.display = 'block'; // Hacer visible el mensaje
+            this.style.display = 'none'; // Ocultar el botón después del pago
+        });
+    }
+});
